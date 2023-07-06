@@ -1,0 +1,177 @@
+  
+  /* css pour l'animation du bouton panda! */
+
+  .cover {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    pointer-events: none;
+  }
+  
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .panda_face.hide { opacity: 0; }
+  
+  span { margin-left:12px; }
+  
+  .sign {
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .panda {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    transition: 2s;
+  }
+  
+  .panda_inner {
+    height: 100%;
+  }
+  
+  .panda_inner svg {
+    height: 100%;
+    width: auto;
+  }
+  
+  button {
+    width: 180px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .panda_face {
+    position: relative;
+    height: 25px;
+    width: auto;
+  }
+  
+  .panda_face {
+    opacity: 1;
+  }
+  
+  .panda_face svg {
+    height: 100%;
+    width: auto;
+  }
+  
+  .panda_white { fill: white; }
+  .blue { fill: #19e912; }
+  .green { fill: rgb(43, 163, 113); }
+  .pink { fill: rgb(255, 0, 128);}
+  .brown { fill: rgb(255, 208, 0);}
+  .dark_brown { fill: rgb(43, 9, 235);}
+  
+  button:hover .panda_face {
+    animation: bop infinite 0.2s;
+  }
+  
+  @keyframes bop {
+    0% {
+      top: 0;
+      transform: scale(1);
+    }
+    50% {
+      top: -5px;
+      transform: scale(0.95,1.05);
+    }
+    90% {
+      transform: scale(1.1,0.9);
+    }
+    100% {
+      top: 0;
+      transform: scale(1);
+    }
+  }
+  
+  button.animate svg {
+    animation: spin infinite linear 0.s;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-720deg);
+    }
+  }
+  
+  @keyframes fadeout {
+    0% { 
+      opacity: 1;
+    }
+    90% { 
+      opacity: 0;
+    }
+    100% { 
+      opacity: 0;
+      display: none;
+    }
+  } 
+  
+  button:hover .fade_in,
+  .panda_face.fade_in {
+    animation: fade_in forwards 0.5s;
+  }
+  
+  @keyframes fade_in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  button.animate {
+    border-color: rgb(58, 28, 9);
+    transform-origin: bottom right;
+    animation: shake ease forwards 0.5s;
+  }
+
+  @keyframes shake {
+    0% { 
+      transform-origin: bottom right;
+      transform: translate(0,0) rotate(0deg);
+    }
+    40% { 
+      transform: translate(5px,0) rotate(45deg);
+    }
+    70% {
+      transform-origin: bottom right; 
+      transform: translate(5px,0) rotate(45deg);
+    }
+    85% { 
+      transform-origin: bottom left; 
+      transform: translate(0,0) rotate(-20deg);
+    }
+    95% { 
+      transform: translate(0,0) rotate(0deg);
+    }
+    100% { 
+      transform-origin: bottom right;
+      transform: translate(0,0) rotate(0deg);
+    }
+  }

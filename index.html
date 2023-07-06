@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRSX</title>
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/panda.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- add favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/HUDSmile.png">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script type="module" src="./assets/script/panda.js"></script>
+
+</head>
+
+<body>
+
+  <!--audio id="audio-player">
+    <source src="./assets/sound/stomp-117637.mp3" type="audio/mpeg">
+    
+  </!--audio-->
+
+
+    <div id="game">
+      <div class="header ">
+        <button  id="retour"> Menu</button>
+        <i class="nes-icon is-large heart"></i>
+        <i class="nes-icon is-large heart"></i>
+        <i class="nes-icon is-large heart"></i>
+
+      </div>
+        <canvas id="canvagame">
+        </canvas>
+        <div class="arrow-container">
+            <!-- Flèche gauche -->
+            <img class="nes-pointer arrow" id="left-arrow" src="assets/img/FLECHESDirectionnelle.png" alt="Flèche gauche" style="transform: rotateY(180deg);" />
+            
+            <!-- Flèche saut -->
+            <img class="nes-pointer arrow" id="jump-arrow" src="assets/img/FLECHESDirectionnelle.png" alt="Flèche saut" style="transform: rotateZ(-90deg);"/>
+          
+         <!-- Flèche droite -->
+         <img class="nes-pointer arrow" id="right-arrow" src="assets/img/FLECHESDirectionnelle.png" alt="Flèche droite" />
+        </div>
+    </div>
+
+      
+    <div id="menu">
+        <div class="wrapper">
+            <img src="assets/img/" alt="">
+            <img class="pandacontent"   src="assets/img/HUDSmile.png"  alt="panda content"></img>
+            <h1>Panda Race Survivor X </h1>
+            <button class="nes-pointer nes-btn is-success" id="Gen_Panda">
+              <div class="panda_face">
+                <svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 91.7 71.3" >
+                  <path class="panda_icon panda_white" d="M86.6,20.4v15.3h5.1v20.4h-5.1v5.1h-5.1v5H71.3v5.1H20.4v-5.1H10.2v-5H5.1v-5.1H0V35.7h5.1V20.4L25.5,5.1h40.7L86.6,20.4z"/>
+                  <path class="panda_icon pink" d="M40.7,45.8h10.2v5.1H40.7V45.8z M10.2,25.4H5.1v-5.1H0V10.2h5.1V5.1h5.1V0h10.2v5.1h5.1v5.1h-5.1v5.1h-5.1v5h-5.1V25.4z
+                    M30.5,45.8h-5v5.1H15.3V35.6h5.1v-5.1h10.1V45.8z M61.1,56H56v5.1H35.6V56H56v-5.1h5.1V56z M76.4,50.9H66.2v-5.1h-5.1V30.5h10.2
+                  v5.1h5.1V50.9z M91.7,20.3h-5.1v5.1h-5.1v-5.1h-5.1v-5h-5.1v-5.1h-5.1V5.1h5.1V0h10.2v5.1h5.1v5.1h5.1V20.3z"/>
+                </svg>
+              </div>
+              <span>panda!</span>
+            </button>
+            <button class="nes-pointer nes-btn is-success" id="startButton" style="display:none">start</button>
+          </div>
+          <div class="cover"></div>
+        </div>
+    </div>
+
+    <div id="defeat" style="display: none;">
+        <div class="g-over">
+            <img src="assets/img/HUDSadge.png" alt="game-over" data-aos="fade-down">
+            <div id="text">Game Over</div>
+            <div class="score">1586</div>
+            <button class="restart">Rejouer</button><br>
+            <div class="vies">
+                <i class="nes-icon is-medium heart"></i>
+                <i class="nes-icon is-medium heart"></i>
+                <i class="nes-icon is-medium is-transparent heart"></i>
+            </div>
+        </div>
+    </div>
+    <div id="victoire" style="display: none;">
+        <img src="./assets/img/HUDSmile.png" alt="">
+        <p>VICTOIRE !</p>
+        <div class="score">1586</div>
+        <button class="restart">Rejouer</button>
+        <div class="vies">
+            <i class="nes-icon is-medium heart"></i>
+            <i class="nes-icon is-medium heart"></i>
+            <i class="nes-icon is-medium is-transparent heart"></i>
+        </div>
+    </div>
+    <script type="module" src="./assets/script/main.js"></script>
+    <script type="module" src="./assets/script/menu.js"></script>
+    <script type="module" src="./assets/script/panda.js"></script>
+    <script>
+        const audio = new Audio();
+        audio.src = './assets/sound/stomp-117637.mp3';
+        audio.autoplay = true;
+        audio.volume = 0.5;
+    </script>
+</body>
+</html>

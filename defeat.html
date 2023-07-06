@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PandaMAX</title>
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/panda!.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- add favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/HUDSmile.png">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="module" src="./assets/script/pandalib.js"></script>
+</head>
+<body>
+    <div id="defeat">
+        <div class="g-over">
+            <img src="assets/img/HUDSadge.png" alt="game-over" data-aos="fade-down">
+            <div id="text">Game Over</div>
+            <div class="score">1586</div>
+            <button class="restart">Rejouer</button><br>
+            <div class="vies">
+                <i class="nes-icon is-medium heart"></i>
+                <i class="nes-icon is-medium heart"></i>
+                <i class="nes-icon is-medium is-transparent heart"></i>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./assets/script/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>                        
+    <script>
+    AOS.init({ duration : 1500, easing: 'ease-in-out'});
+    </script>
+</body>
+</html>

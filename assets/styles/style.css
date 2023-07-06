@@ -1,0 +1,172 @@
+
+  * {
+    box-sizing: border-box;
+  }
+  
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+   /* background-image: url(assets/img/bambou.gif);  */
+    /* rouge sang */
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+#game{
+    position: absolute;
+    top: 0;
+    left: calc(50vw - 200px); 
+}
+
+/* page menu start */
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+span, .oui{
+    text-transform: uppercase;
+}
+#menu img {
+    margin-bottom: 20px;
+}
+#menu ,h1 ,span{
+    font-size: 20px;
+    color: white;
+    font-family: 'Press Start 2P';   
+}
+
+#menu button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+/* page menu end */
+
+  /* page defeat start */
+  .g-over{
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+#text{
+    font-family: 'Press Start 2P';
+    font-size: 1.5rem;
+    color: #ffff;
+    width: 220px;
+    text-align: center;
+    margin: 15px auto;
+}
+.score{
+  font-family: 'Press Start 2P';
+  font-size: 1.5rem;
+  color:yellow;
+}
+.g-over img{
+    height: 100px;
+    width: 100px;
+}
+.g-over button{
+    width: 200px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid rgb(62, 156, 7);
+    border-width:2px 2px 7px 2px;
+    background-color: rgb(13, 199, 13);
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+    color: white;
+    transition: 0.3s;
+}
+/* page defeat end  */
+
+
+
+/* page Victoire */
+#victoire {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#victoire p {
+  font-size: 1.5rem;
+  color: #ffff;
+  width: 240px;
+  text-align: center;
+  margin: 15px auto;
+}
+
+
+#victoire img {
+  height: 100px;
+  width: 100px;
+}
+
+#playagain {
+  width: 200px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid rgb(62, 156, 7);
+  border-width:2px 2px 7px 2px;
+  background-color: rgb(13, 199, 13);
+  font-family: 'Press Start 2P';
+  font-size: 15px;
+  color: white;
+  transition: 0.3s;
+}
+
+#playagain:hover {
+  border-width: 2px 2px 4px 2px;
+  margin-top: 3px;
+}
+
+#playagain:focus {
+  outline: none;
+}
+
+/* fin page Victoire */
+
+/* Style pour positionner les flèches en bas de la page */
+    .arrow-container {
+        position: fixed;
+        bottom: 10px;
+        width: 400px;
+        display:flex;
+        justify-content: space-evenly;
+        text-align: center;
+        z-index: 10;
+      }
+      
+      /* Style pour les flèches */
+      .arrow {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        margin: 0 10px;
+      } 
+
